@@ -1,0 +1,392 @@
+/* Сбрасываем все стили, чтобы потом небыло никаких проблем с вычислением высоты и ширины блоков*/
+* , *:before, *:after {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #0A090A;
+	color: #fff;
+	font-family: 'Roboto', sans-serif;
+	background-image: url('../img/main-bg.jpg');
+	background-repeat: no-repeat;
+	background-position: top center;
+}
+
+.container {
+	/* рамка контейнера, для удобства выравнивания объектов на странице, после настройки объектов ее удаляем
+	border: 1px solid red; */
+	/* максимальная щирина */
+	max-width: 1140px;
+	/* виравнивем по центру */
+	margin: auto;
+}
+
+/* стили для шапки */
+.header {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	/* выравниваемвсе по центру по горизонтали */
+	-ms-align-items: center;
+	align-items: center;
+	justify-content: space-between;
+	/* внутренний отступ сверху*/
+	padding-top: 45px;
+	margin-bottom: 30%;
+}
+
+.logo {
+	font-style: normal;
+	font-weight: 900;
+	font-size: 24px;
+	line-height: 28px;
+	cursor: pointer;
+}
+
+.search {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	/* выравниваем по середине gj ujhbpjynfkb*/
+	-ms-align-items: center;
+	align-items: center;
+	flex: 0.8;
+}
+
+.search-input {
+	/* цвет фона */
+	/*background: rgba(196, 196, 196, 0.5);*/
+	background-color: rgba(196, 196, 196, 0.5);
+	/* скругление */
+	border-radius: 5px;
+	/* внутренний отступ сверху */
+	padding-top: 12px;
+	/* внутренний отступ снизу */
+	padding-bottom: 12px;
+	/* отступ по краям */
+	padding-left: 18px;
+	padding-right: 18px;
+	/* убираем рамку */
+	border: none;
+	flex: 1;
+	font-size: 14px;
+	line-height: 16px;
+	-webkit-appearance: textfield; /* исправляет стиль строки поиска в Safari */
+}
+
+.search-input::-webkit-input-placeholder { /* Edge/Chrome */
+  color: #AEAEAE;
+}
+
+.search-input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #AEAEAE;
+}
+
+.search-input::-moz-placeholder { /* Firefox 19+ */
+	color: #AEAEAE;
+	opacity: 1;
+}
+
+.search-input:-moz-placeholder { /* Firefox 4-18 */
+	color: #AEAEAE;
+	opacity: 1;
+}
+
+.search-input::placeholder {
+  color: #AEAEAE;
+}
+
+.search-button {
+	background-color: transparent; /* кнопка прозрачная */
+	border: none;
+	/* отступы */
+	padding: 10px  18px;
+}
+
+.user {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-ms-align-items: center;
+	align-items: center;
+}
+
+.avatar {
+	margin-left: 20px;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	object-fit: cover;
+	/*cursor: pointer;*/
+}
+
+.bookmark {
+	 background-color: transparent;
+	 border: none;
+	 cursor: pointer;
+}
+
+/* --------------------------------------- */
+
+.main {
+
+}
+
+.title {
+	margin: 0;
+	font-family: "Playfair Display", serif;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 48px;
+	line-height: 64px;
+	/* identical to box height */
+	color: #FFFFFF;
+	margin-bottom: 7px;
+}
+
+.title-en {
+	/* Тег span строчный(поэтому не применяется свойство margin-bottom: 38px). Поэтому преобразуем его в строчно блочный*/
+	display: inline-block;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 23px;
+	/* identical to box height */
+	color: #787878;
+	margin-bottom: 38px;
+}
+
+.info {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-ms-align-items: center;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 108px;
+}
+
+.movie-info {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-ms-align-items: center;
+	align-items: center;
+}
+
+.tag {
+	display: inline-block;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 19px;
+	/* identical to box height */
+	color: #333333;
+
+	background: #FFFFFF;
+	border-radius: 3px;
+	padding: 5px 10px;
+	margin-right: 20px;
+}
+
+.country {
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 19px;
+	/* identical to box height */
+	color: #FFFFFF;
+	margin-right: 33px;
+}
+
+.trayler {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-ms-align-items: center;
+	align-items: center;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 19px;
+	/* identical to box height */
+	color: #FFFFFF;
+	text-decoration: none;
+	/*margin-right: 595px;*/
+}
+
+.trayler:before { /* псевдоэлемент называется */
+	/*display: inline-block; Убрали потому, что саму кнопу(.trayler) сделали flex'овой*/
+	content: '';
+	width: 30px;
+	height: 30px;
+	background-image: url(../img/play.svg);
+	background-repeat: no-repeat;
+	-webkit-background-size: 100%;
+	background-size: 100%;
+	/*vertical-align: middle; Это выравнивание кнопки по центру в данном случае не походит, мы сделали ее(кнопку) flex'овой*/
+	margin-right: 15px;
+}
+
+.more {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-ms-align-items: center;
+	align-items: center;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 19px;
+	/* identical to box height */
+	text-align: right;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+.more:after {
+	display: inline-block;
+	content: '';
+	width: 30px;
+	height: 30px;
+	background-image: url(../img/play.svg);/* Мы используем туже картинку для кнопки Подробнее, что и для Смотреть трейлер(для экономии места на ЖД), но перевернем ее на 90 градусов */
+	background-repeat: no-repeat;
+	-webkit-background-size: 100%;
+	background-size: 100%;
+	margin-left: 15px;
+	-webkit-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	-o-transform: rotate(90deg);
+	transform: rotate(90deg);
+}
+
+/* -------------------------------------- */
+
+.content {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;/* Без этого значения блок .content занимал всю ширину блока */
+	justify-content: space-between;
+	background: #FFFFFF;
+	border-radius: 3px;
+	color: #000000;
+	padding: 43px 50px; /* Отству от краев сверху и слева */
+}
+
+.short-info {
+
+}
+
+.poster {
+	display: block;
+	margin-top: -77px;
+	margin-bottom: 19px;
+}
+
+.button {
+	background: #FF8F27;
+	padding: 10px 44px;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 16px;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	border: none;
+	color: #FFFFFF;
+}
+
+.actors-title {
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: 900;
+	font-size: 16px;
+	line-height: 150%;
+	padding-left: 15px;
+	/* identical to box height, or 24px */
+	color: #000000;
+	margin-bottom: 10px;
+}
+
+.actors-list {
+	margin: 0;
+	list-style: none;
+	padding-left: 15px;
+	text-decoration: underline;
+
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 150%;
+	/* or 24px */
+	color: #000000;
+}
+
+.actors-list-item {
+
+}
+
+.full-info {
+	flex: 0.97;
+}
+
+.menu {}
+
+.tabs-item {
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 21px;
+	/* identical to box height */
+	color: #000000;
+	text-decoration: none;
+	margin-right: 40px;
+}
+
+.bookmark-added {}
+
+.tabs-item-active {
+	color: #FF8F27;
+}
+
+.full-content {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+}
+
+.tabs-content {
+	margin-right: 70px;
+}
+
+.text {}
+.text-title {}
+.subscribe {}

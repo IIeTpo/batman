@@ -3,6 +3,129 @@
 	box-sizing: border-box;
 }
 
+/* Правила для адаптивного дизайна */
+@media (max-width: 1200px;) {
+	.container {
+		max-width: 960px;
+	}
+	.menu-item {
+		font-size: 16px;
+	}
+}
+
+@media (max-width: 992px) {
+	.container {
+		max-width: 740px;
+	}
+	.menu {
+		-webkit-flex-wrap: wrap;
+		-moz-flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		-o-flex-wrap: wrap;
+		flex-wrap: wrap; /* это свойство значит, что если элементы не помещаются в одну строку, их надо перенести */
+	}
+	.menu-item {
+		flex-basis: 20%; /* расположение элементов меню */
+		line-height: 2; /* отступ сверху между элементами меню(на маленьком экране) */
+	}
+	.full-content {
+		-webkit-flex-wrap: wrap;
+		-moz-flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		-o-flex-wrap: wrap;
+		flex-wrap: wrap;
+	}
+	.menu-tabs-content {
+		margin-bottom: 4%;
+	}
+	.text {
+		font-size: 14px;
+	}
+	.actors-list-item {
+		font-size: 14px;
+	}
+}
+
+@media (max-width: 768px) {
+	.container {
+		max-width:540px;
+	}
+	.more {
+		display: none;
+	}
+	.menu-item {
+		flex-basis: 44%;
+	}
+	.menu-tabs-content {
+		margin-right: 0;
+	}
+}
+
+@media (max-width: 578px) {
+	.container {
+		width: 90%;
+	}
+	/*.more {
+		display: none;/* не убирается на маленьком дисплее кнопка Подробнее
+	}*/
+	.header {
+		/*-webkit-flex-wrap: wrap;
+		-moz-flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		-o-flex-wrap: wrap;*/
+		flex-wrap: wrap;/* Если элементы header'а не помещаются в одну строку - они должны перенестись */
+	}
+	.search {/* на маленьком дисплее не становится по середине */
+		flex-basis: 100%;
+		order: 3;/* строку поиска делаем 3им элементом в header'е, чтобы она опустилась на новую строку */
+		margin-top: 5%;
+	}
+	.content {
+		/*-webkit-flex-wrap: wrap;
+		-moz-flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		-o-flex-wrap: wrap;*/
+		flex-wrap: wrap;
+	}
+	.short-info {
+		margin-bottom: 5%;
+	}
+	.actors-list, .actors-title {
+		display: none;
+	}
+	/*.more {
+		display: none;
+	}*/
+	/*.menu-item {
+		flex-basis: 44%;
+	}*/
+	/*.menu-tabs-content {
+		margin-right: 0;
+	}*/
+	.movie-info {
+		/*-webkit-flex-wrap: wrap;
+		-moz-flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		-o-flex-wrap: wrap;*/
+		flex-wrap: wrap;
+	}
+	.trayler {
+		flex-basis: 100%;
+		margin-top: 10%;
+	}
+	.short-info {
+		margin-right: 0;
+	}
+	.button {
+		width: 100%;
+	}
+	.poster {
+		margin-top: -50%;
+		display:inline-block;
+		width: 100%;
+	}
+}
+
 body {
 	background-color: #0A090A;
 	color: #fff;
@@ -10,6 +133,8 @@ body {
 	background-image: url('../img/main-bg.jpg');
 	background-repeat: no-repeat;
 	background-position: top center;
+	/*-webkit-background-size: 100%;/* чтобы картинка подстравивалась под большие мониторы */
+	/*background-size: 100%; /* если убираю это свойство картинка на маленьком дисплее становится нормальной */
 }
 
 .container {
@@ -23,13 +148,13 @@ body {
 
 /* стили для шапки */
 .header {
-	display: -webkit-flex;
+	/*display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
-	display: -o-flex;
+	display: -o-flex;*/
 	display: flex;
 	/* выравниваемвсе по центру по горизонтали */
-	-ms-align-items: center;
+	/*-ms-align-items: center;*/
 	align-items: center;
 	justify-content: space-between;
 	/* внутренний отступ сверху*/
@@ -46,13 +171,13 @@ body {
 }
 
 .search {
-	display: -webkit-flex;
+	/*display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
-	display: -o-flex;
+	display: -o-flex;*/
 	display: flex;
 	/* выравниваем по середине gj ujhbpjynfkb*/
-	-ms-align-items: center;
+	/*-ms-align-items: center;*/
 	align-items: center;
 	flex: 0.8;
 }
@@ -108,12 +233,12 @@ body {
 }
 
 .user {
-	display: -webkit-flex;
+	/*display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
-	display: -o-flex;
+	display: -o-flex;*/
 	display: flex;
-	-ms-align-items: center;
+	/*-ms-align-items: center;*/
 	align-items: center;
 }
 
@@ -123,7 +248,7 @@ body {
 	height: 40px;
 	border-radius: 50%;
 	object-fit: cover;
-	/*cursor: pointer;*/
+	cursor: pointer;
 }
 
 .bookmark {
@@ -164,24 +289,24 @@ body {
 }
 
 .info {
-	display: -webkit-flex;
+	/*display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
-	display: -o-flex;
+	display: -o-flex;*/
 	display: flex;
-	-ms-align-items: center;
+	/*-ms-align-items: center;*/
 	align-items: center;
 	justify-content: space-between;
 	margin-bottom: 108px;
 }
 
 .movie-info {
-	display: -webkit-flex;
+	/*display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
-	display: -o-flex;
+	display: -o-flex;*/
 	display: flex;
-	-ms-align-items: center;
+	/*-ms-align-items: center;*/
 	align-items: center;
 }
 
@@ -213,12 +338,12 @@ body {
 }
 
 .trayler {
-	display: -webkit-flex;
+	/*display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
-	display: -o-flex;
+	display: -o-flex;*/
 	display: flex;
-	-ms-align-items: center;
+	/*-ms-align-items: center;*/
 	align-items: center;
 	font-family: Roboto;
 	font-style: normal;
@@ -238,19 +363,19 @@ body {
 	height: 30px;
 	background-image: url(../img/play.svg);
 	background-repeat: no-repeat;
-	-webkit-background-size: 100%;
+	/*-webkit-background-size: 100%;*/
 	background-size: 100%;
 	/*vertical-align: middle; Это выравнивание кнопки по центру в данном случае не походит, мы сделали ее(кнопку) flex'овой*/
 	margin-right: 15px;
 }
 
 .more {
-	display: -webkit-flex;
+	/*display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
-	display: -o-flex;
-	display: flex;
-	-ms-align-items: center;
+	display: -o-flex;*/
+	/*display: flex;*//* с ним не убирается кнопка Подробнее на маленьком дисплее */
+	/*-ms-align-items: center;*/
 	align-items: center;
 	font-family: Roboto;
 	font-style: normal;
@@ -270,37 +395,37 @@ body {
 	height: 30px;
 	background-image: url(../img/play.svg);/* Мы используем туже картинку для кнопки Подробнее, что и для Смотреть трейлер(для экономии места на ЖД), но перевернем ее на 90 градусов */
 	background-repeat: no-repeat;
-	-webkit-background-size: 100%;
+	/*-webkit-background-size: 100%;*/
 	background-size: 100%;
 	margin-left: 15px;
-	-webkit-transform: rotate(90deg);
+	/*-webkit-transform: rotate(90deg);
 	-ms-transform: rotate(90deg);
-	-o-transform: rotate(90deg);
+	-o-transform: rotate(90deg);*/
 	transform: rotate(90deg);
 }
 
 /* -------------------------------------- */
 
 .content {
-	display: -webkit-flex;
+	/*display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
-	display: -o-flex;
+	display: -o-flex;*/
 	display: flex;/* Без этого значения блок .content занимал всю ширину блока */
 	justify-content: space-between;
 	background: #FFFFFF;
 	border-radius: 3px;
 	color: #000000;
-	padding: 43px 50px; /* Отству от краев сверху и слева */
+	padding: 3% 4%; /* Отступ от краев сверху и слева */
 }
 
 .short-info {
-
+	margin-right: 3%;
 }
 
 .poster {
 	display: block;
-	margin-top: -77px;
+	margin-top: -38%;
 	margin-bottom: 19px;
 }
 
@@ -336,7 +461,9 @@ body {
 	list-style: none;
 	padding-left: 15px;
 	text-decoration: underline;
+}
 
+.actors-list-item {
 	font-family: Roboto;
 	font-style: normal;
 	font-weight: normal;
@@ -346,17 +473,22 @@ body {
 	color: #000000;
 }
 
-.actors-list-item {
-
-}
-
 .full-info {
 	flex: 0.97;
 }
 
-.menu {}
+.menu {
+	/*display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;*/
+	display: flex;
+	/*-ms-align-items: center;*/
+	align-items: center;
+	margin-bottom: 4%;
+}
 
-.tabs-item {
+.menu-item {
 	font-family: Roboto;
 	font-style: normal;
 	font-weight: normal;
@@ -365,28 +497,99 @@ body {
 	/* identical to box height */
 	color: #000000;
 	text-decoration: none;
-	margin-right: 40px;
+	/*margin-right: 40px; переносим в селектор .tabs-item:not(last-child), потому что исключаем последний элемент в списке(кнопку закладки) для отступа, потому что он не помещается и переносится на следующую строку*/ 
 }
 
-.bookmark-added {}
+.menu-item:not(:last-child) {
+	margin-right: 4%;/* Фиксированные пиксли заменили на % для адаптивности */
+}
 
-.tabs-item-active {
+.bookmark-added {
+	/*color: #FF8F27;*/
+	/*border: none;*/
+	vertical-align: middle;
+}
+
+.menu-item-active {
 	color: #FF8F27;
 }
 
 .full-content {
-	display: -webkit-flex;
+	/*display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
-	display: -o-flex;
+	display: -o-flex;*/
 	display: flex;
 	justify-content: space-between;
 }
 
-.tabs-content {
-	margin-right: 70px;
+.menu-tabs-content {
+	/*margin-right: 70px;*/
 }
 
-.text {}
+.text {
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 140%;
+	/* or 22px */
+	color: #000000;
+	margin-top: 0;
+}
+
 .text-title {}
 .subscribe {}
+
+.subscribe-title {
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: 900;
+	font-size: 16px;
+	line-height: 150%;
+	/* identical to box height, or 24px */
+	color: #000000;
+	margin-top: 0;
+	margin-bottom: 14px;
+}
+
+.subscribe-form {
+	/*display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;*/
+	display: flex;/* flex'ом мы выровняли в ряд 2 объекта форму ввода(.subscribe-input) и кнопку(.subscribe-button) */
+	margin-bottom: 48px;
+}
+
+.subscribe-input{
+	background-color: rgba(196, 196, 196, 0.5);
+	/* скругление */
+	/*border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px; Вместо этой большой записи закруглим углы сокращенным способом*/
+	border-radius: 5px 0px 0px 5px;
+	/* внутренний отступ сверху */
+	padding-top: 12px;
+	/* внутренний отступ снизу */
+	padding-bottom: 12px;
+	/* отступ по краям */
+	padding-left: 18px;
+	padding-right: 18px;
+	/* убираем рамку */
+	border: none;
+	flex: 1;
+	font-size: 14px;
+	line-height: 16px;
+	-webkit-appearance: textfield; /* исправляет стиль строки поиска в Safari */
+}
+
+.subscribe-button{
+	background: #FF8F27;
+	/*border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px; Вместо этой большой записи закруглим углы сокращенным способом*/
+	border-radius: 0px 5px 5px 0px;
+	border: none;
+	padding: 12px;
+}
+
+.banner {}

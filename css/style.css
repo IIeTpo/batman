@@ -3,128 +3,7 @@
 	box-sizing: border-box;
 }
 
-/* Правила для адаптивного дизайна */
-@media (max-width: 1200px;) {
-	.container {
-		max-width: 960px;
-	}
-	.menu-item {
-		font-size: 16px;
-	}
-}
 
-@media (max-width: 992px) {
-	.container {
-		max-width: 740px;
-	}
-	.menu {
-		-webkit-flex-wrap: wrap;
-		-moz-flex-wrap: wrap;
-		-ms-flex-wrap: wrap;
-		-o-flex-wrap: wrap;
-		flex-wrap: wrap; /* это свойство значит, что если элементы не помещаются в одну строку, их надо перенести */
-	}
-	.menu-item {
-		flex-basis: 20%; /* расположение элементов меню */
-		line-height: 2; /* отступ сверху между элементами меню(на маленьком экране) */
-	}
-	.full-content {
-		-webkit-flex-wrap: wrap;
-		-moz-flex-wrap: wrap;
-		-ms-flex-wrap: wrap;
-		-o-flex-wrap: wrap;
-		flex-wrap: wrap;
-	}
-	.menu-tabs-content {
-		margin-bottom: 4%;
-	}
-	.text {
-		font-size: 14px;
-	}
-	.actors-list-item {
-		font-size: 14px;
-	}
-}
-
-@media (max-width: 768px) {
-	.container {
-		max-width:540px;
-	}
-	.more {
-		display: none;
-	}
-	.menu-item {
-		flex-basis: 44%;
-	}
-	.menu-tabs-content {
-		margin-right: 0;
-	}
-}
-
-@media (max-width: 578px) {
-	.container {
-		width: 90%;
-	}
-	/*.more {
-		display: none;/* не убирается на маленьком дисплее кнопка Подробнее
-	}*/
-	.header {
-		/*-webkit-flex-wrap: wrap;
-		-moz-flex-wrap: wrap;
-		-ms-flex-wrap: wrap;
-		-o-flex-wrap: wrap;*/
-		flex-wrap: wrap;/* Если элементы header'а не помещаются в одну строку - они должны перенестись */
-	}
-	.search {/* на маленьком дисплее не становится по середине */
-		flex-basis: 100%;
-		order: 3;/* строку поиска делаем 3им элементом в header'е, чтобы она опустилась на новую строку */
-		margin-top: 5%;
-	}
-	.content {
-		/*-webkit-flex-wrap: wrap;
-		-moz-flex-wrap: wrap;
-		-ms-flex-wrap: wrap;
-		-o-flex-wrap: wrap;*/
-		flex-wrap: wrap;
-	}
-	.short-info {
-		margin-bottom: 5%;
-	}
-	.actors-list, .actors-title {
-		display: none;
-	}
-	/*.more {
-		display: none;
-	}*/
-	/*.menu-item {
-		flex-basis: 44%;
-	}*/
-	/*.menu-tabs-content {
-		margin-right: 0;
-	}*/
-	.movie-info {
-		/*-webkit-flex-wrap: wrap;
-		-moz-flex-wrap: wrap;
-		-ms-flex-wrap: wrap;
-		-o-flex-wrap: wrap;*/
-		flex-wrap: wrap;
-	}
-	.trayler {
-		flex-basis: 100%;
-		margin-top: 10%;
-	}
-	.short-info {
-		margin-right: 0;
-	}
-	.button {
-		width: 100%;
-	}
-	.poster {
-		margin-top: -50%;
-		display:inline-block;
-		width: 100%;
-	}
-}
 
 body {
 	background-color: #0A090A;
@@ -356,7 +235,7 @@ body {
 	/*margin-right: 595px;*/
 }
 
-.trayler:before { /* псевдоэлемент называется */
+.trayler::before { /* псевдоэлемент называется */
 	/*display: inline-block; Убрали потому, что саму кнопу(.trayler) сделали flex'овой*/
 	content: '';
 	width: 30px;
@@ -374,9 +253,10 @@ body {
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;*/
-	/*display: flex;*//* с ним не убирается кнопка Подробнее на маленьком дисплее */
+	display: flex;/* с ним не убирается кнопка Подробнее на маленьком дисплее */
 	/*-ms-align-items: center;*/
 	align-items: center;
+	
 	font-family: Roboto;
 	font-style: normal;
 	font-weight: normal;
@@ -388,8 +268,8 @@ body {
 	text-decoration: none;
 }
 
-.more:after {
-	display: inline-block;
+.more::after {
+	/*display: inline-block;*/
 	content: '';
 	width: 30px;
 	height: 30px;

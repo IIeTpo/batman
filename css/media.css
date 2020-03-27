@@ -89,6 +89,7 @@
 		flex-wrap: wrap;
 	}
 	.short-info {
+		width: 100%;
 		margin-bottom: 5%;
 	}
 	.actors-list, .actors-title {
@@ -119,10 +120,14 @@
 	}
 	.button {
 		width: 100%;
+		display: inline-block;
 	}
 	.poster {
-		margin-top: -50%;
+		margin-top: -20%;
 		display:inline-block;
 		width: 100%;
+	}
+	.subscribe {
+		margin: auto;
 	}
 }

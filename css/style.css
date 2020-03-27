@@ -1,5 +1,5 @@
 /* Сбрасываем все стили, чтобы потом небыло никаких проблем с вычислением высоты и ширины блоков*/
-* , *:before, *:after {
+* , *::before, *::after {
 	box-sizing: border-box;
 }
 
@@ -232,7 +232,6 @@ body {
 	/* identical to box height */
 	color: #FFFFFF;
 	text-decoration: none;
-	/*margin-right: 595px;*/
 }
 
 .trayler::before { /* псевдоэлемент называется */
@@ -404,7 +403,11 @@ body {
 }
 
 .menu-tabs-content {
-	/*margin-right: 70px;*/
+	display: none;
+	margin-right: 70px;
+}
+.visible {
+	display: block;
 }
 
 .text {

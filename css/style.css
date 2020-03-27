@@ -12,8 +12,8 @@ body {
 	background-image: url('../img/main-bg.jpg');
 	background-repeat: no-repeat;
 	background-position: top center;
-	/*-webkit-background-size: 100%;/* чтобы картинка подстравивалась под большие мониторы */
-	/*background-size: 100%; /* если убираю это свойство картинка на маленьком дисплее становится нормальной */
+	-webkit-background-size: auto;/* чтобы картинка подстравивалась под большие мониторы */
+	background-size: auto;
 }
 
 .container {
@@ -438,11 +438,13 @@ body {
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;*/
-	display: flex;/* flex'ом мы выровняли в ряд 2 объекта форму ввода(.subscribe-input) и кнопку(.subscribe-button) */
+	/*display: flex;/* flex'ом мы выровняли в ряд 2 объекта форму ввода(.subscribe-input) и кнопку(.subscribe-button) */
+	position: relative;
 	margin-bottom: 48px;
 }
 
 .subscribe-input{
+	width: calc(100%-5px);
 	background-color: rgba(196, 196, 196, 0.5);
 	/* скругление */
 	/*border-top-left-radius: 5px;
@@ -457,19 +459,24 @@ body {
 	padding-right: 18px;
 	/* убираем рамку */
 	border: none;
+	height: 40px;
 	flex: 1;
 	font-size: 14px;
 	line-height: 16px;
-	-webkit-appearance: textfield; /* исправляет стиль строки поиска в Safari */
+	/*-webkit-appearance: textfield; /* исправляет стиль строки поиска в Safari */
 }
 
 .subscribe-button{
+	position: absolute;
 	background: #FF8F27;
-	/*border-top-right-radius: 5px;
-	border-bottom-right-radius: 5px; Вместо этой большой записи закруглим углы сокращенным способом*/
 	border-radius: 0px 5px 5px 0px;
 	border: none;
-	padding: 12px;
+	padding: 11px;
+	height: 40px;
+	width: 40px;
+	top: 0;
+	right: 0;
+	text-align: center;
 }
 
 .banner {}

@@ -12,4 +12,11 @@ $(document).ready(function () {
 		$(this).toggleClass('menu-item-active');					// Присваеваем активной вкладке параметр "активный"
 		//console.log($(this).attr('href'));						// Выводит в консоль ссылку по которой нажали
 	});
+
+	let premieresItem = $('.premieres-item');						// Переменная для ссылок преьер стран, чтобы не кидало на начало страницы
+	console.log(premieresItem);
+
+	premieresItem.on('click', function(event) {
+		event.preventDefault();
+	});
 });

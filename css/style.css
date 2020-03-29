@@ -27,13 +27,13 @@ body {
 
 /* стили для шапки */
 .header {
-	/*display: -webkit-flex;
+	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
-	display: -o-flex;*/
+	display: -o-flex;
 	display: flex;
 	/* выравниваемвсе по центру по горизонтали */
-	/*-ms-align-items: center;*/
+	-ms-align-items: center;
 	align-items: center;
 	justify-content: space-between;
 	/* внутренний отступ сверху*/
@@ -50,13 +50,13 @@ body {
 }
 
 .search {
-	/*display: -webkit-flex;
+	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
-	display: -o-flex;*/
+	display: -o-flex;
 	display: flex;
 	/* выравниваем по середине gj ujhbpjynfkb*/
-	/*-ms-align-items: center;*/
+	-ms-align-items: center;
 	align-items: center;
 	flex: 0.8;
 }
@@ -112,12 +112,12 @@ body {
 }
 
 .user {
-	/*display: -webkit-flex;
+	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;*/
 	display: flex;
-	/*-ms-align-items: center;*/
+	-ms-align-items: center;
 	align-items: center;
 }
 
@@ -168,24 +168,24 @@ body {
 }
 
 .info {
-	/*display: -webkit-flex;
+	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
-	display: -o-flex;*/
+	display: -o-flex;
 	display: flex;
-	/*-ms-align-items: center;*/
+	-ms-align-items: center;
 	align-items: center;
 	justify-content: space-between;
 	margin-bottom: 108px;
 }
 
 .movie-info {
-	/*display: -webkit-flex;
+	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
-	display: -o-flex;*/
+	display: -o-flex;
 	display: flex;
-	/*-ms-align-items: center;*/
+	-ms-align-items: center;
 	align-items: center;
 }
 
@@ -217,12 +217,12 @@ body {
 }
 
 .trayler {
-	/*display: -webkit-flex;
+	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
-	display: -o-flex;*/
+	display: -o-flex;
 	display: flex;
-	/*-ms-align-items: center;*/
+	-ms-align-items: center;
 	align-items: center;
 	font-family: Roboto;
 	font-style: normal;
@@ -241,19 +241,19 @@ body {
 	height: 30px;
 	background-image: url(../img/play.svg);
 	background-repeat: no-repeat;
-	/*-webkit-background-size: 100%;*/
+	webkit-background-size: 100%;
 	background-size: 100%;
 	/*vertical-align: middle; Это выравнивание кнопки по центру в данном случае не походит, мы сделали ее(кнопку) flex'овой*/
 	margin-right: 15px;
 }
 
 .more {
-	/*display: -webkit-flex;
+	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
-	display: -o-flex;*/
+	display: -o-flex;
 	display: flex;/* с ним не убирается кнопка Подробнее на маленьком дисплее */
-	/*-ms-align-items: center;*/
+	-ms-align-items: center;
 	align-items: center;
 	
 	font-family: Roboto;
@@ -274,22 +274,22 @@ body {
 	height: 30px;
 	background-image: url(../img/play.svg);/* Мы используем туже картинку для кнопки Подробнее, что и для Смотреть трейлер(для экономии места на ЖД), но перевернем ее на 90 градусов */
 	background-repeat: no-repeat;
-	/*-webkit-background-size: 100%;*/
+	-webkit-background-size: 100%;
 	background-size: 100%;
 	margin-left: 15px;
-	/*-webkit-transform: rotate(90deg);
+	-webkit-transform: rotate(90deg);
 	-ms-transform: rotate(90deg);
-	-o-transform: rotate(90deg);*/
+	-o-transform: rotate(90deg);
 	transform: rotate(90deg);
 }
 
 /* -------------------------------------- */
 
 .content {
-	/*display: -webkit-flex;
+	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
-	display: -o-flex;*/
+	display: -o-flex;
 	display: flex;/* Без этого значения блок .content занимал всю ширину блока */
 	justify-content: space-between;
 	background: #FFFFFF;
@@ -357,13 +357,14 @@ body {
 }
 
 .menu {
-	/*display: -webkit-flex;
+	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
-	display: -o-flex;*/
+	display: -o-flex;
 	display: flex;
-	/*-ms-align-items: center;*/
+	ms-align-items: center;
 	align-items: center;
+	justify-content: space-between;
 	margin-bottom: 4%;
 }
 
@@ -394,10 +395,10 @@ body {
 }
 
 .full-content {
-	/*display: -webkit-flex;
+	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
-	display: -o-flex;*/
+	display: -o-flex;
 	display: flex;
 	justify-content: space-between;
 }
@@ -408,6 +409,28 @@ body {
 }
 .visible {
 	display: block;
+}
+
+.premires-list {
+	margin: 0;
+	list-style: none;
+	padding-left: 15px;
+
+}
+
+.premieres-list-item {
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 50px;
+	/* identical to box height */
+	color: #000000;
+
+}
+
+.premieres-item {
+	color: #FF8F27;
 }
 
 .text {

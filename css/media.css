@@ -3,8 +3,6 @@
 @media screen and (max-width: 1200px;) {
 	.container {
 		max-width: 960px;
-		/*-webkit-background-size: auto;*/
-		/*background-size: auto;*/
 	}
 	.menu-item {
 		font-size: 16px;
@@ -17,10 +15,10 @@
 		max-width: 740px;
 	}
 	.menu {
-		/*-webkit-flex-wrap: wrap;
+		-webkit-flex-wrap: wrap;
 		-moz-flex-wrap: wrap;
 		-ms-flex-wrap: wrap;
-		-o-flex-wrap: wrap;*/
+		-o-flex-wrap: wrap;
 		flex-wrap: wrap; /* это свойство значит, что если элементы не помещаются в одну строку, их надо перенести */
 	}
 	.menu-item {
@@ -28,10 +26,10 @@
 		line-height: 2; /* отступ сверху между элементами меню(на маленьком экране) */
 	}
 	.full-content {
-		/*-webkit-flex-wrap: wrap;
+		-webkit-flex-wrap: wrap;
 		-moz-flex-wrap: wrap;
 		-ms-flex-wrap: wrap;
-		-o-flex-wrap: wrap;*/
+		-o-flex-wrap: wrap;
 		flex-wrap: wrap;
 	}
 	.menu-tabs-content {
@@ -66,14 +64,11 @@
 	.container {
 		width: 90%;
 	}
-	/*.more {
-		display: none;/* не убирается на маленьком дисплее кнопка Подробнее *
-	}*/
 	.header {
-		/*-webkit-flex-wrap: wrap;
+		-webkit-flex-wrap: wrap;
 		-moz-flex-wrap: wrap;
 		-ms-flex-wrap: wrap;
-		-o-flex-wrap: wrap;*/
+		-o-flex-wrap: wrap;
 		flex-wrap: wrap;/* Если элементы header'а не помещаются в одну строку - они должны перенестись */
 	}
 	.search {/* на маленьком дисплее не становится по середине */
@@ -82,10 +77,10 @@
 		margin-top: 5%;
 	}
 	.content {
-		/*-webkit-flex-wrap: wrap;
+		-webkit-flex-wrap: wrap;
 		-moz-flex-wrap: wrap;
 		-ms-flex-wrap: wrap;
-		-o-flex-wrap: wrap;*/
+		-o-flex-wrap: wrap;
 		flex-wrap: wrap;
 	}
 	.short-info {
@@ -95,20 +90,19 @@
 	.actors-list, .actors-title {
 		display: none;
 	}
-	/*.more {
-		display: none;
-	}*/
-	/*.menu-item {
-		flex-basis: 44%;
-	}*/
-	/*.menu-tabs-content {
-		margin-right: 0;
-	}*/
+	.premieres-list-item {
+
+		font-size: 14px;
+	}
+	.premieres-item {
+		font-size: 14px;
+		margin-left: 30px;
+	}
 	.movie-info {
-		/*-webkit-flex-wrap: wrap;
+		-webkit-flex-wrap: wrap;
 		-moz-flex-wrap: wrap;
 		-ms-flex-wrap: wrap;
-		-o-flex-wrap: wrap;*/
+		-o-flex-wrap: wrap;
 		flex-wrap: wrap;
 	}
 	.trayler {
@@ -127,6 +121,17 @@
 		display:inline-block;
 		width: 100%;
 	}
+	.menu {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		margin-left: 4%;
+		margin-bottom: 4%;
+	}
+	.bookmark-added {
+		display: none;
+	}
+
 	.subscribe {
 		margin: auto;
 	}
